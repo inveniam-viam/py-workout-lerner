@@ -1,37 +1,36 @@
-# Exercise 1 
-# Number Guessing Game 
+# Exercise 1 - Guessing Numbers
 
-import random
 
-def guessing_game():
+import random   # to generate the random number between 0 to 100
 
-    chosen_number: int = random.randint(0, 100)
 
-    while True:
+def guessing_game() -> None:
 
-        user_guess:int = int(input("Guess what number has been chosen: "))
+    answer = random.randint(0, 100)
+    attempts = 0
 
-        if user_guess == chosen_number:
+    while guess := input("Enter a number between 0 and 100: "):
 
-            print("Just right")
-            break
-        
-        elif user_guess > chosen_number:
+        attempts += 1
+
+        if int(guess) > answer:
 
             print("Too high")
         
-        elif user_guess < chosen_number:
+        elif int(guess) < answer:
 
             print("Too low")
         
         else:
 
-            print("Invalid input")
+            print("Just about right")
+            break
 
+        if attempts == 3:
+
+            print("You're out of guesses, goodbye!")
+            break
 
 if __name__ == "__main__":
 
     guessing_game()
-
-
-
