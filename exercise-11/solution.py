@@ -14,5 +14,5 @@ if __name__ == "__main__":
     
     print(alphabetize_names(PEOPLE))
 
-
+    # alternate implementation
     print(sorted(PEOPLE, key = itemgetter("last", "first")))
