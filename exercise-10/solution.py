@@ -1,7 +1,7 @@
 def redefine_mysum(*args):
 
     if not args:
-
+        """return the empty tuple if that's the case"""
         return args
     
     output = args[0]
