@@ -1,25 +1,36 @@
-def even_odd_sums(nums: tuple|list) -> list:
+def even_odd_sums_original(nums: tuple|list) -> list:
 
     return [sum(nums[::2]), sum(nums[1::2])]
 
-def plus_minus(nums: list|tuple) -> float:
+# alternative implementation
 
-    sum_elements: float = nums[0]
+def even_odd_sums_alternate(input_sequence: list|tuple) -> list[int]:
 
-    for i in range(1, len(nums)):
+    even_sum = sum([value
+                    for index, value in enumerate(input_sequence)
+                    if index %2 == 0])
+    
+    odd_sum = sum([value 
+                   for index, value in enumerate(input_sequence)
+                   if index %2 != 0])
+    
+    return [even_sum, odd_sum]
 
-        if i % 2 == 0:
+def plus_minus (input_sequence: list|tuple) -> int:
 
-            sum_elements += (-1 * nums[i])
-        else:
-            sum_elements += nums[i]
+    total_sum: int = input_sequence[0]
 
-    return sum_elements
+    total_sum += sum([
+        value if index %2 == 0 else -value 
+        for index, value in enumerate(input_sequence[1:])
+    ])
+
+    return total_sum
         
 
 
 
 
-print(even_odd_sums([10, 20, 30, 40, 50, 60]))
+print(even_odd_sums_original([10, 20, 30, 40, 50, 60]))
 print(plus_minus([10, 20, 30, 40, 50, 60]))
 print(plus_minus((10, 20, 30, 40, 50, 60)))
