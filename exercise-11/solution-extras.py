@@ -43,11 +43,16 @@ def vowel_sort_alt(input_seq: list|tuple) -> list:
 
     return [item[0] for item in sorted_counts]
 
-def vowelsort_oneliner(input_seq):
+def vowelsort_oneliner(input_seq: list|tuple) -> list:
 
     return sorted(input_seq, key = lambda x: sum(1 if char.lower() in "aeiou" else 0 for char in x))
 
+# Problem 3
 
+def listsort_by_sum(input_seq: list) -> list:
+    """Given a list of lists, with each function containing zero or more
+    number, this function sorts the list by the sum of each inner lists' numbers."""
+    return sorted(input_seq, key = sum)
 
 
 if __name__ == "__main__":
