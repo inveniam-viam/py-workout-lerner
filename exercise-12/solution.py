@@ -1,5 +1,7 @@
 from collections import Counter
 
+# RECOMMENDED TO USE REUVEN'S SOLUTION - THIS MIGHT BE FAULTY
+
 def most_repeating_word(input_seq: list|tuple) -> str:
 
     # creating a list to store the number of times the most frequen

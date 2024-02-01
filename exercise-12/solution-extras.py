@@ -13,6 +13,7 @@ def max_repeating_vowels(words: list[str]) -> str:
     return max(words, key = repeating_vowel_count)
 
 
-
-
 print(max_repeating_vowels(["helly", "world", "kyeps", "peeling"]))
+
+
+# 12.2 and 12.3 not posted since it contains personal information
