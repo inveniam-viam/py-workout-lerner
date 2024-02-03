@@ -1,5 +1,7 @@
 # Solution to 14.1
 
+from datetime import date
+
 logins = dict(jared = "jared123", sean = "diane123", oli = "larizzelle123")
 
 def login():
@@ -70,7 +72,34 @@ def get_weather():
 # get_weather()
     
 # 14.3
+
+# use dt keys
     
+birthdays: dict[str, str] = dict(me = "1997-10-05", mum = "1966-06-03",
+                                 dad = "1966-11-09", bro = "1994-12-30", janet = "1997-07-12",)
+
+# too lazy to write the dates as datetime objects so converting them here
+
+def get_age_days():
+
+    """Function to compute a person's age in days. 
+    the person and their birthday are stored in a dictionary."""
+
+    todayy = date.today()
+
+    while who := input("Whose age in days would you like to know? "):
+
+        if who in birthdays:
+
+            print(f"{who} is {(todayy - date.fromisoformat(birthdays[who])).days} days old as of today")
+        
+        else:
+            print("Couldn't find that person. Try again later.")
+            break
+
+get_age_days()
+    
+
 
     
 
