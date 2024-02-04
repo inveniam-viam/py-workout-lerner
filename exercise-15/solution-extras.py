@@ -41,8 +41,8 @@ def http_response_logger(log_file):
 
         for line in f:
 
-            http_response_code = line.split()[-2]
-            ip_address = line.split()[0]
+            http_response_code = line.split()[-2]   # standard CLF log file always has status code at this pos
+            ip_address = line.split()[0]            # standard CLF log file always has IP address first
 
             responses_dict[http_response_code].append(ip_address)
 
