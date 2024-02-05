@@ -1,0 +1,6 @@
+This is a sample text file to count vowels.
+It includes various sentences and structures.
+Each line may contain multiple instances of vowels.
+This is to ensure a diverse set of examples.
+Counting vowels: a, e, i, o, and u.
+End of the sample file for vowel counting.

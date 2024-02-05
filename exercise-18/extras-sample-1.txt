@@ -1,0 +1,6 @@
+This is a sample file with various kinds of content.
+123 and 456 are numbers that should be summed.
+Hello, world! This is a test.
+789 and 101112 are also numbers.
+This line has no numbers.
+End of the sample file with a total of four numbers.
