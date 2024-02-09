@@ -2,6 +2,9 @@
 
 def implement_wc(in_txt_file: str) -> dict:
 
+    """Function that computes the number of lines, characters, words and unique
+    words in a text file."""
+
     out_dict: dict = dict.fromkeys(("lines", "characters", "words", "unique words"), 0)                    # going to parse the file into a dictionary
 
     unique_words: set = set()
